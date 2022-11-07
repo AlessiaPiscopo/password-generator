@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/locked-with-key_1f510.png"
+    />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts: Karla, Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate a <span>random password</span></h1>
+      <h2>Never use an insecure password again.</h2>
+
+      <section class="generate-section">
+        <div class="password-container">
+          <span id="password" class="password-text"></span>
+        </div>
+        <button id="generate-password-btn">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </button>
+
+        <button id="copy-password-btn">
+          <i class="fa-regular fa-copy"></i>
+        </button>
+        <!-- <div id="tooltip" class="tooltip-container"></div> -->
+      </section>
+
+      <hr />
+
+      <!-- Customize -->
+      <section class="customize-section">
+        <div class="slider-container">
+          <label for="password-length">Length</label>
+          <input
+            type="range"
+            id="password-length-slider"
+            name="password-length"
+            min="8"
+            max="20"
+            value="15"
+          />
+          <span id="selected-length" class="selected-length"></span>
+        </div>
+
+        <div>
+          <label for="symbols-toggle">Symbols</label>
+          <input
+            type="checkbox"
+            id="symbols-toggle"
+            name="symbols-toggle"
+            checked
+          />
+        </div>
+
+        <div>
+          <label for="numbers-toggle">Numbers</label>
+          <input
+            type="checkbox"
+            id="numbers-toggle"
+            name="numbers-toggle"
+            checked
+          />
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
